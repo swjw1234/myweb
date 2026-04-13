@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정지원 | 삼성전자 반도체 설비 유지보수 엔지니어 포트폴리오</title>
+    <meta name="description" content="결함 제로를 설계하는 하이브리드 엔지니어 정지원의 포트폴리오 사이트입니다.">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Section Specific Styles */
+        #home {
+            position: relative;
+            background: linear-gradient(rgba(10, 10, 12, 0.7), rgba(10, 10, 12, 0.7)), url('images/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-sub);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .infographic {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .tech-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--samsung-blue);
+        }
+
+        .terminal-ui {
+            background: #1a1b1e;
+            padding: 2rem;
+            border-radius: 12px;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #333;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .terminal-content { color: #f0f0f0; line-height: 1.4; font-size: 0.9rem; }
+        .blue-text { color: var(--samsung-blue); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">JIWON.DEV</div>
+        <nav class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#mission">MISSION</a>
+            <a href="#tech">TECH</a>
+            <a href="#prove">PROVE</a>
+            <a href="#ax-log">AX LOG</a>
+            <a href="#forum">FORUM</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="hero-content" data-aos="fade-up">
+                <span class="badge" style="color: var(--samsung-blue); font-weight: 700; letter-spacing: 2px;">HYBRID ENGINEER</span>
+                <h1>결함 제로(Defect Zero)<br>반도체 설비 전문가</h1>
+                <p>로봇 소프트웨어 전공과 반도체 부트캠프 마이크로디그리(MD)를 통해 다져진 전문성으로 삼성전자 DS부문의 설비 가동률을 극대화합니다.</p>
+                <div class="hero-btns" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#prove" class="btn-primary">실전 성과 확인</a>
+                    <a href="#forum" class="btn-secondary">자유게시판</a>
+                    <a href="#contact" class="btn-secondary">이메일 문의</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">경영 철학 & 비전</h2>
+                <div class="glass-card" data-aos="fade-right">
+                    <h3 style="color: var(--samsung-blue); font-size: 1.8rem; margin-bottom: 1rem;">"정도경영을 통한 기술 우위의 실현"</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-sub);">
+                        삼성전자의 5대 경영 원칙을 기반으로, 저는 '원칙을 준수하는 정교함'이 설비 유지보수의 핵심이라고 믿습니다. 
+                        단순한 수리를 넘어, 잠재적 결함을 사전 예측하고 엔지니어링 신뢰성을 확보하여 24시간 끊임없는 반도체 생산 라인을 수호합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Section (Microdegree) -->
+        <section id="tech">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">직무 전문성 (MD 과정 이수)</h2>
+                <div class="stat-grid">
+                    <div class="glass-card infographic" data-aos="zoom-in">
+                        <h4>Micro-Degree: 초급</h4>
+                        <div class="tech-item">기초 전기전자의 이해 및 회로 설계</div>
+                        <div class="tech-item">CAD를 활용한 설비 도면 해독</div>
+                    </div>
+                    <div class="glass-card infographic" data-aos="zoom-in" data-aos-delay="200">
+                        <h4>Micro-Degree: 중급</h4>
+                        <div class="tech-item">PLC 기반 기구 제어 프로그래밍</div>
+                        <div class="tech-item">공합 및 유압 시스템 제어 실습</div>
+                    </div>
+                    <div class="glass-card infographic" data-aos="zoom-in" data-aos-delay="400">
+                        <h4>Micro-Degree: 고급</h4>
+                        <div class="tech-item">설비 유지보수 시뮬레이션 및 실무</div>
+                        <div class="tech-item">AI 기반 고장 진단 알고리즘 연구</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prove Section (SCADA) -->
+        <section id="prove">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">실전 성과: SCADA 스마트팩토리</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                    <div class="glass-card" data-aos="fade-left">
+                        <h3 style="margin-bottom: 1.5rem;">지능형 로봇 동아리 프로젝트</h3>
+                        <p style="color: var(--text-sub);">
+                            SCADA(감시 제어 및 데이터 수집) 시스템을 활용하여 가상의 생산 라인을 구축했습니다. 
+                            센서 데이터를 실시간으로 수집하여 설비의 이상 징후를 감지하고, 다운타임을 15% 감소시키는 알고리즘을 적용했습니다.
+                        </p>
+                        <ul style="margin-top: 2rem; color: var(--samsung-blue);">
+                            <li># 스마트팩토리 구축</li>
+                            <li># 데이터 기반 유지보수</li>
+                            <li># 가동률 최적화</li>
+                        </ul>
+                    </div>
+                    <div class="video-grid" data-aos="fade-right">
+                        <div class="video-item">
+                            <iframe src="https://www.youtube.com/embed/ZZx1PoK5uWI" title="YouTube Shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-item">
+                            <iframe src="https://www.youtube.com/embed/oZlNDUKuB-c" title="YouTube Shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AX Log Section -->
+        <section id="ax-log">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">AI 협업 로그 (AX Innovation)</h2>
+                <div class="terminal-ui" data-aos="flip-up">
+                    <div class="terminal-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="terminal-content">
+                        <p>> Initializing AI Orchestration Mode...</p>
+                        <p>> <span class="blue-text">User:</span> Optimize maintenance schedule using AI tools.</p>
+                        <p>> <span class="blue-text">AI:</span> Analyzing equipment log patterns... Anomaly detected in Unit B-24.</p>
+                        <p>> <span class="blue-text">Assistant:</span> Refactoring diagnostic code for real-time monitoring.</p>
+                        <p>> <span class="blue-text">System:</span> Clean code standards applied. Security protocols verified.</p>
+                        <p>> Deployment successful. Efficiency increased by 25%.</p>
+                        <p><br>_</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Forum Section -->
+        <section id="forum">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">자유게시판 & 소통 공간</h2>
+                <p style="text-align: center; color: var(--text-sub); margin-top: -2rem; margin-bottom: 3rem;" data-aos="fade-up">엔지니어링 관련 질문이나 정지원 엔지니어에게 남기고 싶은 메시지를 자유롭게 남겨주세요.</p>
+                <div class="glass-card" data-aos="fade-up">
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px;">
+                        <input type="text" id="post-author" placeholder="작성자 성함">
+                        <input type="text" id="post-title" placeholder="주제 또는 질문 제목">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="post-content" rows="3" placeholder="내용을 상세히 입력해 주세요. (예: 설비 유지보수 관련 요청사항 등)"></textarea>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; border-radius: 10px;" onclick="addPost()">게시글 등록하기</button>
+                    
+                    <div id="board-list" class="board-container">
+                        <!-- Posts will appear here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">CONTACT ME</h2>
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <form class="glass-card" data-aos="zoom-in" onsubmit="event.preventDefault(); alert('메시지가 전송되었습니다!');">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" required placeholder="홍길동">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required placeholder="example@samsung.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" required placeholder="함께 혁신을 만들어갈 엔지니어링 제안을 기다립니다."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">메시지 보내기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 3rem; text-align: center; border-top: 1px solid var(--glass-border);">
+        <p style="color: var(--text-sub);">&copy; 2024 Jiwon Jeong. All Rights Reserved for Samsung Electronics DS Portfolio.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+        
+        // Navigation Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(10, 10, 12, 0.95)';
+                header.style.padding = '1rem 5%';
+            } else {
+                header.style.background = 'rgba(10, 10, 12, 0.8)';
+                header.style.padding = '1.5rem 5%';
+            }
+        });
+    </script>
+</body>
+</html>
