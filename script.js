@@ -1,15 +1,5 @@
 // Enhanced Forum Logic with Author Names
-let posts = JSON.parse(localStorage.getItem('forum_posts')) || [
-    { 
-        id: 1, 
-        author: '김철수',
-        title: '삼성전자 반도체 설비 엔지니어링 질문', 
-        content: 'PLC 제어에서 외란 대응 로직을 구현할 때 주로 어떤 방식을 사용하시나요?',
-        replies: [
-            { id: 101, content: '피드백 제어와 함께 전향 제어(Feed-forward)를 결합하면 외란 대응 능력이 대폭 향상됩니다!' }
-        ]
-    }
-];
+let posts = JSON.parse(localStorage.getItem('forum_posts')) || [];
 
 let editingId = null;
 
@@ -28,7 +18,7 @@ function renderPosts() {
             <div class="post-main">
                 <div class="post-content" style="width: 100%;">
                     <div class="post-author-tag" style="font-size: 0.8rem; color: var(--samsung-blue); font-weight: 700; margin-bottom: 5px;">
-                        BY. ${post.author || '익명 방문자'}
+                        BY. ${post.author || '익명'} (${post.email || '이메일 없음'})
                     </div>
                     ${isEditing ? `
                         <input type="text" id="edit-title-${post.id}" class="edit-mode-input" value="${post.title}" style="background: rgba(255,255,255,0.1); border: 1px solid var(--samsung-blue); padding: 5px; color: white; margin-bottom: 10px;">
@@ -58,8 +48,8 @@ function renderPosts() {
                     `).join('')}
                 </div>
                 <div class="reply-input-group">
-                    <input type="text" id="reply-input-${post.id}" placeholder="답글이나 소통 내용을 남겨주세요...">
-                    <button class="btn-primary" style="padding: 5px 15px; font-size: 0.8rem;" onclick="addReply(${post.id})">답글</button>
+                    <input type="text" id="reply-input-${post.id}" placeholder="창시자의 답변이 이곳에 달립니다...">
+                    <button class="btn-primary" style="padding: 5px 15px; font-size: 0.8rem;" onclick="addReply(${post.id})">창시자 답글</button>
                 </div>
             </div>
         `;
@@ -69,17 +59,19 @@ function renderPosts() {
 
 function addPost() {
     const authorInput = document.getElementById('post-author');
+    const emailInput = document.getElementById('post-email');
     const titleInput = document.getElementById('post-title');
     const contentInput = document.getElementById('post-content');
     
-    if (!authorInput.value || !titleInput.value || !contentInput.value) {
-        alert('모든 필드(이름, 제목, 내용)를 입력해주세요.');
+    if (!authorInput.value || !emailInput.value || !titleInput.value || !contentInput.value) {
+        alert('모든 필드(이름, 이메일, 제목, 내용)를 입력해주세요.');
         return;
     }
     
     const newPost = {
         id: Date.now(),
         author: authorInput.value,
+        email: emailInput.value,
         title: titleInput.value,
         content: contentInput.value,
         replies: []
@@ -89,6 +81,7 @@ function addPost() {
     saveAndRender();
     
     authorInput.value = '';
+    emailInput.value = '';
     titleInput.value = '';
     contentInput.value = '';
 }
@@ -144,7 +137,62 @@ function saveAndRender() {
     renderPosts();
 }
 
-// Initial Render
+// Section Switching Logic (SPA Style)
+function switchSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active');
+        window.scrollTo(0, 0);
+        
+        // Dynamic Header Transparency
+        const header = document.querySelector('header');
+        if (sectionId === 'home') {
+            header.style.background = 'rgba(10, 10, 12, 0.8)';
+        } else {
+            header.style.background = 'rgba(10, 10, 12, 0.95)';
+        }
+
+        // Re-trigger AOS animations
+        setTimeout(() => {
+            if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+            }
+        }, 100);
+    }
+}
+
+// Initial Render and Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
     renderPosts();
+
+    // Navigation Links Click Handler
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
+            e.preventDefault();
+            const sectionId = href.substring(1);
+            switchSection(sectionId);
+            
+            // Update Active Link Style
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.style.color = 'var(--text-sub)';
+            });
+            if (this.parentElement.classList.contains('nav-links')) {
+                this.style.color = 'var(--samsung-blue)';
+            }
+        });
+    });
+
+    // Handle initial hash
+    const initialHash = window.location.hash.substring(1);
+    if (initialHash) {
+        switchSection(initialHash);
+    }
 });

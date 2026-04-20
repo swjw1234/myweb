@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --samsung-blue: #007aff;
   --samsung-blue-dark: #005bb5;
@@ -87,11 +91,23 @@ header {
 
 /* Layout */
 section {
-  padding: 100px 10%;
+  padding: 120px 10%;
   min-height: 100vh;
-  display: flex;
+  display: none; /* Default hide */
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+}
+
+section.active {
+  display: flex; /* Show active */
+  opacity: 1;
+  animation: sectionFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes sectionFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .container {
@@ -318,4 +334,10 @@ h2.section-title {
 /* Animations */
 [data-aos] {
   transition-duration: 1000ms !important;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+    40% {transform: translateX(-50%) translateY(-10px);}
+    60% {transform: translateX(-50%) translateY(-5px);}
 }
