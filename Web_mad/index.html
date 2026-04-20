@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정지원 | 삼성전자 반도체 설비 유지보수 엔지니어 포트폴리오</title>
+    <meta name="description" content="결함 제로를 설계하는 하이브리드 엔지니어 정지원의 포트폴리오 사이트입니다.">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Section Specific Styles */
+        #home {
+            position: relative;
+            background: linear-gradient(rgba(10, 10, 12, 0.7), rgba(10, 10, 12, 0.7)), url('images/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-sub);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .infographic {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .tech-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--samsung-blue);
+        }
+
+        .terminal-ui {
+            background: #1a1b1e;
+            padding: 2rem;
+            border-radius: 12px;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #333;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .terminal-content { color: #f0f0f0; line-height: 1.4; font-size: 0.9rem; }
+        .blue-text { color: var(--samsung-blue); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">JIWON.DEV</div>
+        <nav class="nav-links">
+            <a href="#home">홈</a>
+            <a href="#mission">미션</a>
+            <a href="#tech">학업 과목</a>
+            <a href="#prove">실적</a>
+            <a href="#forum">자유게시판</a>
+            <a href="#contact">문의/연락</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <div class="hero-content" data-aos="fade-up">
+                <span class="badge" style="color: var(--samsung-blue); font-weight: 700; letter-spacing: 2px;">HYBRID ENGINEER</span>
+                <h1>결함 제로(Defect Zero)<br>반도체 설비 전문가</h1>
+                <p>로봇 소프트웨어 전공과 반도체 부트캠프 마이크로디그리(MD)를 통해 다져진 전문성으로 삼성전자 DS부문의 설비 가동률을 극대화합니다.</p>
+                <div class="hero-btns" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#mission" class="btn-primary">핵심 가치 보기</a>
+                    <a href="#tech" class="btn-secondary">기술 스택</a>
+                    <a href="#forum" class="btn-secondary" style="border-color: var(--samsung-blue);">자유게시판</a>
+                </div>
+
+                <!-- URL Display -->
+                <div class="url-display" style="margin-top: 3rem; font-family: monospace; color: var(--samsung-blue); opacity: 0.7; font-size: 0.9rem; letter-spacing: 1px;">
+                    <i class="fas fa-link"></i> WWW.JIWON.DEV
+                </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite;">
+                <a href="#mission" style="color: var(--text-sub); font-size: 1.5rem; opacity: 0.6;">
+                    <i class="fas fa-chevron-down">↓</i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">경영 철학 & 비전</h2>
+                <div class="glass-card" data-aos="fade-right">
+                    <h3 style="color: var(--samsung-blue); font-size: 1.8rem; margin-bottom: 1rem;">"정도경영을 통한 기술 우위의 실현"</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-sub);">
+                        삼성전자의 5대 경영 원칙을 기반으로, 저는 '원칙을 준수하는 정교함'이 설비 유지보수의 핵심이라고 믿습니다. 
+                        단순한 수리를 넘어, 잠재적 결함을 사전 예측하고 엔지니어링 신뢰성을 확보하여 24시간 끊임없는 반도체 생산 라인을 수호합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Section (Microdegree) -->
+        <section id="tech">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">직무 전문성 (MD 과정 이수)</h2>
+                
+                <!-- Roadmap Image -->
+                <div class="roadmap-container" data-aos="zoom-in" style="margin-bottom: 4rem; text-align: center;">
+                    <img src="images/roadmap.png" alt="삼성전자 커리큘럼 로드맵" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid var(--glass-border);">
+                </div>
+
+                <div class="stat-grid">
+                    <div class="glass-card infographic" data-aos="zoom-in">
+                        <h4>Micro-Degree: 초급</h4>
+                        <div class="tech-item">기초 전기전자의 이해 및 회로 설계</div>
+                        <div class="tech-item">CAD를 활용한 설비 도면 해독</div>
+                    </div>
+                    <div class="glass-card infographic" data-aos="zoom-in" data-aos-delay="200">
+                        <h4>Micro-Degree: 중급</h4>
+                        <div class="tech-item">PLC 기반 기구 제어 프로그래밍</div>
+                        <div class="tech-item">공합 및 유압 시스템 제어 실습</div>
+                    </div>
+                    <div class="glass-card infographic" data-aos="zoom-in" data-aos-delay="400">
+                        <h4>Micro-Degree: 고급</h4>
+                        <div class="tech-item">설비 유지보수 시뮬레이션 및 실무</div>
+                        <div class="tech-item">AI 기반 고장 진단 알고리즘 연구</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prove Section (Multi-Achievements) -->
+        <section id="prove">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">실전 성과: 프로젝트 및 수상</h2>
+                
+                <div style="display: flex; flex-direction: column; gap: 2.5rem; align-items: center;">
+                    <!-- Achievement 1: Bootcamp -->
+                    <div class="glass-card" data-aos="fade-up" style="max-width: 900px; width: 100%;">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--samsung-blue);">반도체 전문인력 양성 부트캠프</h3>
+                        <p style="color: var(--text-sub); font-size: 1.1rem; line-height: 1.8;">
+                            반도체 부트캠프 사업단에 선발되어 반도체 생산 설비 및 공정 전반에 걸친 실무 중심의 집중 교육 과정을 이수했습니다. 
+                            삼성전자 DS부문 직무에 최적화된 마이크로디그리(MD) 과정을 통해 최고 수준의 기술 우위를 확보했습니다.
+                        </p>
+                        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(0, 122, 255, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--samsung-blue); border: 1px solid var(--samsung-blue);"># 반도체 부트캠프</span>
+                            <span class="badge" style="background: rgba(0, 122, 255, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--samsung-blue); border: 1px solid var(--samsung-blue);"># MD 과정 이수</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2: Robot Competition -->
+                    <div class="glass-card" data-aos="fade-up" style="max-width: 900px; width: 100%;" data-aos-delay="200">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--samsung-blue);">창의적공학설계 로봇경진대회</h3>
+                        <p style="color: var(--text-sub); font-size: 1.1rem; line-height: 1.8;">
+                            '창의적공학설계' 교과 과정에서 기획된 로봇경진대회에 출전하여 하드웨어 설계와 제어 알고리즘 구현을 전담했습니다. 
+                            복잡한 장애물을 회피하고 최적의 경로를 찾아내는 로봇을 직접 제작하며 메카트로닉스 기초 역량과 협업 능력을 증명했습니다.
+                        </p>
+                        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(0, 122, 255, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--samsung-blue); border: 1px solid var(--samsung-blue);"># 로봇경진대회</span>
+                            <span class="badge" style="background: rgba(0, 122, 255, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--samsung-blue); border: 1px solid var(--samsung-blue);"># 자율 주행 알고리즘</span>
+                            <span class="badge" style="background: rgba(0, 122, 255, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--samsung-blue); border: 1px solid var(--samsung-blue);"># 창의적 공학 설계</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Forum Section -->
+        <section id="forum">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">자유게시판 & 소통 공간</h2>
+                <p style="text-align: center; color: var(--text-sub); margin-top: -2rem; margin-bottom: 3rem;" data-aos="fade-up">엔지니어링 관련 질문이나 정지원 엔지니어에게 남기고 싶은 메시지를 자유롭게 남겨주세요.</p>
+                <div class="glass-card" data-aos="fade-up">
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 15px;">
+                        <input type="text" id="post-author" placeholder="작성자 성함">
+                        <input type="email" id="post-email" placeholder="이메일 주소">
+                        <input type="text" id="post-title" placeholder="주제 또는 질문 제목">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="post-content" rows="3" placeholder="내용을 상세히 입력해 주세요. (예: 설비 유지보수 관련 요청사항 등)"></textarea>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; border-radius: 10px;" onclick="addPost()">게시글 등록하기</button>
+                    
+                    <div id="board-list" class="board-container">
+                        <!-- Posts will appear here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">CONTACT ME</h2>
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <form class="glass-card" data-aos="zoom-in" onsubmit="event.preventDefault(); alert('메시지가 전송되었습니다!');">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" required placeholder="홍길동">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required placeholder="example@samsung.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" required placeholder="함께 혁신을 만들어갈 엔지니어링 제안을 기다립니다."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">메시지 보내기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 3rem; text-align: center; border-top: 1px solid var(--glass-border);">
+        <p style="color: var(--text-sub);">&copy; 2024 Jiwon Jeong. All Rights Reserved for Samsung Electronics DS Portfolio.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+        
+        // Navigation Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(10, 10, 12, 0.95)';
+                header.style.padding = '1rem 5%';
+            } else {
+                header.style.background = 'rgba(10, 10, 12, 0.8)';
+                header.style.padding = '1.5rem 5%';
+            }
+        });
+    </script>
+</body>
+</html>
